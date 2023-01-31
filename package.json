@@ -1,0 +1,19 @@
+{
+  "name": "weather_api",
+  "version": "1.0.0",
+  "description": "Broadcast from AccuRite Weather reception of radio signal to a websocket for use in other apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "api",
+    "accurite"
+  ],
+  "author": "Zachary D. Skelton (zskelton@skeltonnetworks.com)",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
