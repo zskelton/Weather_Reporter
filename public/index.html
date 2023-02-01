@@ -1,15 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
+    <meta http-equiv="refresh" content="30" />
+    <script src="https://kit.fontawesome.com/9b3a95a482.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css" />
-    <title>JSON Server</title>
+    <title>Weather Server</title>
   </head>
 
   <body>
@@ -18,21 +16,21 @@
         <nav>
           <ul>
             <li class="title">
-              JSON Server
+              Weather Server - Nevada, Iowa
             </li>
             <li>
-              <a href="https://github.com/users/typicode/sponsorship">
-                <i class="fas fa-heart"></i>GitHub Sponsors
+              <a href="https://skeltonnetworks.com/" target="_blank">
+                <i class="fas fa-house"></i>Skelton Networks
               </a>
             </li>
             <li>
-              <a href="https://my-json-server.typicode.com">
-                <i class="fas fa-burn"></i>My JSON Server
+              <a href="https://github.com/zskelton" target="_blank">
+                <i class="fa-brands fa-github"></i>Github
               </a>
             </li>
             <li>
-              <a href="https://thanks.typicode.com">
-                <i class="far fa-laugh"></i>Supporters
+              <a href="https://www.linkedin.com/in/zach-skelton-09b60398/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>Linked-In
               </a>
             </li>
           </ul>
@@ -41,43 +39,48 @@
     </header>
     <main>
       <div class="container">
-        <h1>Congrats!</h1>
-        <p>
-          You're successfully running JSON Server
-          <br />
-          ✧*｡٩(ˊᗜˋ*)و✧*｡
-        </p>
+        <h1>Current Weather:</h1>
+
+        <div id="display_error"></div>
+
+        <div id="test_weather_display">
+          <div id="station_type">
+            <span class="weather_label">Station:</span>
+            <span class="weather_data" id="type_data">--</span>
+          </div>
+          <div id="temperature">
+            <span class="weather_label">Temperature:</span>
+            <span class="weather_data" id="temp_data">--</span>
+          </div>
+          <div id="humidty">
+            <span class="weather_label">Humidity:</span>
+            <span class="weather_data" id="humi_data">--</span>
+          </div>
+          <div id="wind_speed">
+            <span class="weather_label">Wind Speed:</span>
+            <span class="weather_data" id="wspd_data">--</span>
+          </div>
+          <div id="wind_dir">
+            <span class="weather_label">Wind Direction:</span>
+            <span class="weather_data" id="wdir_data">--</span>
+          </div>
+          <div id="datetime">
+            <span class="weather_label">Date/Time:</span>
+            <span class="weather_data" id="date_data">--</span>
+          </div>
+          <div id="battery">
+            <span class="weather_label">Battery:</span>
+            <span class="weather_data" id="batr_data">--</span>
+          </div>
+        </div>
 
         <div id="resources"></div>
-
-        <p>
-          To access and modify resources, you can use any HTTP method:
-        </p>
-        <p>
-          <code>GET</code>
-          <code>POST</code>
-          <code>PUT</code>
-          <code>PATCH</code>
-          <code>DELETE</code>
-          <code>OPTIONS</code>
-        </p>
-
-        <div id="custom-routes"></div>
-
-        <h1>Documentation</h1>
-        <p>
-          <a href="https://github.com/typicode/json-server">
-            README
-          </a>
-        </p>
-      </div>
     </main>
 
     <footer>
       <div class="container">
         <p>
-          To replace this page, create a
-          <code>./public/index.html</code> file.
+          Skelton Networks © 2023
         </p>
       </div>
     </footer>

@@ -21,7 +21,7 @@ function tempReport() {
     "channel" : "C",
     "sequence_num" : 0,
     "battery_ok" : 1,
-    "wind_avg_km_h" : 0.000,
+    "wind_avg_km_h" : 6.2,
     "temperature_F" : 27.300,
     "humidity" : 55,
     "mic" : "CHECKSUM"
@@ -39,7 +39,7 @@ function windReport() {
     "channel" : "C",
     "sequence_num" : 2,
     "battery_ok" : 1,
-    "wind_avg_km_h" : 0.000,
+    "wind_avg_km_h" : 6.2,
     "wind_dir_deg" : 315.000,
     "rain_in" : 32.640,
     "mic" : "CHECKSUM"

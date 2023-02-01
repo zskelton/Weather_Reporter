@@ -50,10 +50,6 @@ nav li {
   color: #4c566a;
 }
 
-.fa-heart {
-  color: deeppink;
-}
-
 main {
   flex: 1;
 }
@@ -61,6 +57,7 @@ main {
 footer {
   margin-top: 4rem;
   border-top: 1px solid #eee;
+  text-align: center;
 }
 
 h1 {
@@ -110,4 +107,18 @@ code {
   margin: 0rem 0.2rem;
   border-radius: 0.2rem;
   background: #e5e9f0;
+}
+
+.weather_label {
+  display: inline-block;
+  font-weight: bold;
+  width: 125px;
+}
+
+.success {
+  color: #4bb543;
+}
+
+.fail {
+  color: #b00020;
 }

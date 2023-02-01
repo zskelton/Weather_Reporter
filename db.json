@@ -1,26 +1,26 @@
 {
   "wind_rain": {
-    "time": "2023-02-01 17:26:35",
+    "time": "2023-02-01 20:56:54",
     "model": "Acurite-5n1",
     "message_type": 49,
     "id": 3375,
     "channel": "C",
     "sequence_num": 2,
     "battery_ok": 1,
-    "wind_avg_km_h": 0,
+    "wind_avg_km_h": 6.2,
     "wind_dir_deg": 315,
     "rain_in": 32.64,
     "mic": "CHECKSUM"
   },
   "temperature": {
-    "time": "2023-02-01 17:26:55",
+    "time": "2023-02-01 20:56:44",
     "model": "Acurite-5n1",
     "message_type": 56,
     "id": 3375,
     "channel": "C",
     "sequence_num": 0,
     "battery_ok": 1,
-    "wind_avg_km_h": 0,
+    "wind_avg_km_h": 6.2,
     "temperature_F": 27.3,
     "humidity": 55,
     "mic": "CHECKSUM"

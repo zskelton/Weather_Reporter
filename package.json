@@ -4,7 +4,7 @@
   "description": "Broadcast from AccuRite Weather reception of radio signal to a websocket for use in other apps.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --names \"SERVER,DATA\" -c \"bgBlue.bold,bgMagenta.bold\" \"json-server --watch db.json\" \"node index.js\"",
+    "start": "concurrently --names \"SERVER,DATA\" -c \"bgBlue.bold,bgMagenta.bold\" \"json-server --host 192.168.1.25 --watch db.json\" \"node index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

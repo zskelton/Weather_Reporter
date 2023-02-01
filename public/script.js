@@ -1,3 +1,4 @@
+/* RAW DATA RESOURCES */
 function ResourceItem({ name, length }) {
   return `
     <li>
@@ -29,48 +30,45 @@ function NoResources() {
 function ResourcesBlock({ db }) {
   return `
     <div>
-      <h1>Resources</h1>
+      <h1>Raw Data:</h1>
       ${Object.keys(db).length ? ResourceList({ db }) : NoResources()}
     </div>
   `
 }
 
+/* WEATHER DISPLAY */
+function toMPH(_kph) {
+  return (_kph * 0.621371).toFixed(2);
+}
+
+function WeatherDisplay({ db }) {
+  console.log(db);
+  document.getElementById("type_data").innerHTML = db?.temperature?.model ? `${db.temperature.model}` : "--";
+  document.getElementById("temp_data").innerHTML = db?.temperature?.temperature_F ? `${db.temperature.temperature_F}℉` : "--";
+  document.getElementById("humi_data").innerHTML = db?.temperature?.humidity ? `${db.temperature.humidity}%` : "--";
+  document.getElementById("wdir_data").innerHTML = db?.wind_rain?.wind_dir_deg ? `${db.wind_rain.wind_dir_deg}°` : "--";
+  document.getElementById("wspd_data").innerHTML = db?.wind_rain?.wind_avg_km_h ? `${toMPH(db.wind_rain.wind_avg_km_h)}mph` : "--";
+  document.getElementById("date_data").innerHTML = db?.temperature?.time ? `${db.temperature.time}` : "--";
+  document.getElementById("batr_data").innerHTML = db?.temperature?.battery_ok ?
+    `<i class="fa-solid fa-battery-full success"></i>` :
+    `<i class="fa-solid fa-battery-empty fail"></i>`;
+}
+
+function NoInformation() {
+  return `<p>No weather information found</p>`
+}
+
+/* MAIN FUNCTION */
 window
   .fetch('db')
   .then((response) => response.json())
   .then(
-    (db) =>
-      (document.getElementById('resources').innerHTML = ResourcesBlock({ db }))
-  )
-
-function CustomRoutesBlock({ customRoutes }) {
-  const rules = Object.keys(customRoutes)
-  if (rules.length) {
-    return `
-      <div>
-        <h1>Custom Routes</h1>
-        <table>
-          ${rules
-            .map(
-              (rule) =>
-                `<tr>
-              <td>${rule}</td>
-              <td><code>⇢</code> ${customRoutes[rule]}</td>
-            </tr>`
-            )
-            .join('')}
-        </table>
-      </div>
-    `
-  }
-}
-
-window
-  .fetch('__rules')
-  .then((response) => response.json())
-  .then(
-    (customRoutes) =>
-      (document.getElementById('custom-routes').innerHTML = CustomRoutesBlock({
-        customRoutes,
-      }))
+    (db) => {
+      document.getElementById('resources').innerHTML = ResourcesBlock({ db });
+      if(Object.keys(db).length) {
+        WeatherDisplay({ db });
+      } else {
+        document.getElementById('display_error').innerHTML = NoInformation();
+      }
+    }
   )
