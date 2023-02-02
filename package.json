@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "concurrently": "^7.6.0",
-    "json-server": "^0.17.1"
+    "json-server": "^0.17.1",
+    "node-cron": "^3.0.2"
   }
 }

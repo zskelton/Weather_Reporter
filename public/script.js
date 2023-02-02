@@ -43,15 +43,34 @@ function toMPH(_kph) {
 
 function WeatherDisplay({ db }) {
   console.log(db);
-  document.getElementById("type_data").innerHTML = db?.temperature?.model ? `${db.temperature.model}` : "--";
-  document.getElementById("temp_data").innerHTML = db?.temperature?.temperature_F ? `${db.temperature.temperature_F}℉` : "--";
-  document.getElementById("humi_data").innerHTML = db?.temperature?.humidity ? `${db.temperature.humidity}%` : "--";
-  document.getElementById("wdir_data").innerHTML = db?.wind_rain?.wind_dir_deg ? `${db.wind_rain.wind_dir_deg}°` : "--";
-  document.getElementById("wspd_data").innerHTML = db?.wind_rain?.wind_avg_km_h ? `${toMPH(db.wind_rain.wind_avg_km_h)}mph` : "--";
-  document.getElementById("date_data").innerHTML = db?.temperature?.time ? `${db.temperature.time}` : "--";
-  document.getElementById("batr_data").innerHTML = db?.temperature?.battery_ok ?
-    `<i class="fa-solid fa-battery-full success"></i>` :
-    `<i class="fa-solid fa-battery-empty fail"></i>`;
+  document.getElementById("type_data").innerHTML =
+    db?.temperature?.model ?
+      `${db.temperature.model}` :
+      "--";
+  document.getElementById("temp_data").innerHTML =
+    db?.temperature?.temperature_F ?
+      `${db.temperature.temperature_F}℉` :
+      "--";
+  document.getElementById("humi_data").innerHTML =
+    db?.temperature?.humidity ?
+      `${db.temperature.humidity}%` :
+      "--";
+  document.getElementById("wdir_data").innerHTML =
+    db?.wind_rain?.wind_dir_deg ?
+      `${db.wind_rain.wind_dir_deg}°` :
+      "--";
+  document.getElementById("wspd_data").innerHTML =
+    db?.wind_rain?.wind_avg_km_h ?
+      `${toMPH(db.wind_rain.wind_avg_km_h)}mph` :
+      "--";
+  document.getElementById("date_data").innerHTML =
+    db?.temperature?.time ?
+      `${db.temperature.time}` :
+      "--";
+  document.getElementById("batr_data").innerHTML =
+    db?.temperature?.battery_ok ?
+      `<i class="fa-solid fa-battery-full success"></i>` :
+      `<i class="fa-solid fa-battery-empty fail"></i>`;
 }
 
 function NoInformation() {

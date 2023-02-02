@@ -1,0 +1,9 @@
+Everyhour:
+- Cronjob starts script:
+  * Script: Runs `433_rtl -F json:read.json -T 120` for 2 Minutes
+  * Script: Replaces old data.json with data_new.json
+- Always NPM running server:
+  * On Client Connection:
+    + Open and read data.json.
+    + Grab latest wind and latest temperature report.
+    + Write these to db.json for server to read in format.

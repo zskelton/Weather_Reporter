@@ -1,6 +1,6 @@
 {
   "wind_rain": {
-    "time": "2023-02-01 20:56:54",
+    "time": "2023-02-02 17:30:47",
     "model": "Acurite-5n1",
     "message_type": 49,
     "id": 3375,
@@ -13,7 +13,7 @@
     "mic": "CHECKSUM"
   },
   "temperature": {
-    "time": "2023-02-01 20:56:44",
+    "time": "2023-02-02 17:31:57",
     "model": "Acurite-5n1",
     "message_type": 56,
     "id": 3375,
