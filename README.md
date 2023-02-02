@@ -20,4 +20,4 @@ Read Data from 5-in-1 Accurite Weather Station to the web.
 
 ### Web Page:
 
-[<img src="public/weather_page.png">]
+<img src="public/weather_page.png">
