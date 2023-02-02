@@ -1,28 +1,28 @@
 {
-  "wind_rain": {
-    "time": "2023-02-02 17:30:47",
-    "model": "Acurite-5n1",
-    "message_type": 49,
-    "id": 3375,
-    "channel": "C",
-    "sequence_num": 2,
-    "battery_ok": 1,
-    "wind_avg_km_h": 6.2,
-    "wind_dir_deg": 315,
-    "rain_in": 32.64,
-    "mic": "CHECKSUM"
-  },
   "temperature": {
-    "time": "2023-02-02 17:31:57",
+    "time": "2023-02-02 14:30:25",
     "model": "Acurite-5n1",
     "message_type": 56,
     "id": 3375,
     "channel": "C",
     "sequence_num": 0,
     "battery_ok": 1,
-    "wind_avg_km_h": 6.2,
-    "temperature_F": 27.3,
-    "humidity": 55,
+    "wind_avg_km_h": 6.795,
+    "temperature_F": 15.6,
+    "humidity": 76,
+    "mic": "CHECKSUM"
+  },
+  "wind_rain": {
+    "time": "2023-02-02 14:30:25",
+    "model": "Acurite-5n1",
+    "message_type": 56,
+    "id": 3375,
+    "channel": "C",
+    "sequence_num": 0,
+    "battery_ok": 1,
+    "wind_avg_km_h": 6.795,
+    "temperature_F": 15.6,
+    "humidity": 76,
     "mic": "CHECKSUM"
   }
 }
